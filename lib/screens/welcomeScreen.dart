@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/widgets.dart';
+import 'package:ourvillage/screens/authentication/loginScreen.dart';
+import 'package:ourvillage/screens/authentication/registerScreen.dart';
 import 'package:ourvillage/screens/components/roundedBtn.dart';
 
 class WelcomeScreen extends StatefulWidget {
-  WelcomeScreen({Key? key}) : super(key: key);
+  WelcomeScreen({Key key}) : super(key: key);
 
   @override
   _WelcomeScreenState createState() => _WelcomeScreenState();
@@ -26,8 +29,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   ),
                   Image.asset(
                     "assets/images/welcomepicture.png",
-                    height: 300,
-                    width: 300,
+                    height: 250,
+                    width: 250,
                   ),
                   SizedBox(
                     height: 30.0,
@@ -43,13 +46,27 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     height: 30.0,
                   ),
                   RoundedBtn(
-                      submit: () {},
+                      submit: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => RegistrationScreen(),
+                          ),
+                        );
+                      },
                       text: "Create Account",
                       color: Color(0xff1b5e20),
                       textcolor: Color(0xffffffff)),
                   Divider(),
                   RoundedBtn(
-                      submit: () {},
+                      submit: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => LoginScreen(),
+                          ),
+                        );
+                      },
                       text: "SignIn",
                       color: Color(0xff1b5e20),
                       textcolor: Color(0xffffffff))

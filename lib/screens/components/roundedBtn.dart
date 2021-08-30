@@ -6,11 +6,11 @@ class RoundedBtn extends StatelessWidget {
   final String text;
   final Color color, textcolor;
   const RoundedBtn({
-    Key? key,
-    required this.submit,
-    required this.text,
-    required this.color,
-    required this.textcolor,
+    Key key,
+    this.submit,
+    this.text,
+    this.color,
+    this.textcolor,
   }) : super(key: key);
 
   @override
