@@ -1,6 +1,6 @@
 # ourvillage
 
-A new Flutter application.
+A new Flutter chat app with firebase.
 
 ## Getting Started
 
